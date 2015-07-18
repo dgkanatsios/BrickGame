@@ -23,14 +23,14 @@ public class BallScript : MonoBehaviour
 
     private void GiveBoostIfMovingOnXorYAxis()
     {
-        if (Mathf.Abs(rigidbody2D.velocity.x - 0.2f) <= 0.2f)
+        if (Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x - 0.2f) <= 0.2f)
         {
             //left or right? 
             bool right = Random.Range(-1.0f, 1.0f) >= 0;
             GetComponent<Rigidbody2D>().AddForce(new Vector2(right ? 5.0f : -5.0f, 0), ForceMode2D.Impulse);
         }
 
-        if (Mathf.Abs(rigidbody2D.velocity.y - 0.2f) <= 0.2f)
+        if (Mathf.Abs(GetComponent<Rigidbody2D>().velocity.y - 0.2f) <= 0.2f)
         {
             //up or down? 
             bool down = Random.Range(-1.0f, 1.0f) >= 0;

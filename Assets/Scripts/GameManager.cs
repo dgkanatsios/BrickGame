@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+
+    Text statusText;
 
     // Use this for initialization
     void Start()
     {
         blocks = GameObject.FindGameObjectsWithTag("Block");
         Ball = GameObject.Find("Ball").GetComponent<BallScript>();
+        statusText = GameObject.Find("Status").GetComponent<Text>();
     }
 
 
@@ -27,6 +31,7 @@ public class GameManager : MonoBehaviour
             case GameState.Start:
                 if (InputTaken())
                 {
+                    statusText.text = string.Format("Lives: {0}  Score: {1}", Lives, Score);
                     CurrentGameState = GameState.Playing;
                     Ball.StartBall();
                 }
@@ -38,6 +43,7 @@ public class GameManager : MonoBehaviour
                 {
                     Restart();
                     Ball.StartBall();
+                    statusText.text = string.Format("Lives: {0}  Score: {1}", Lives, Score);
                     CurrentGameState = GameState.Playing;
                 }
                 break;
@@ -45,6 +51,7 @@ public class GameManager : MonoBehaviour
                 if (InputTaken())
                 {
                     Ball.StartBall();
+                    statusText.text = string.Format("Lives: {0}  Score: {1}", Lives, Score);
                     CurrentGameState = GameState.Playing;
                 }
                 break;
@@ -53,6 +60,7 @@ public class GameManager : MonoBehaviour
                 {
                     Restart();
                     Ball.StartBall();
+                    statusText.text = string.Format("Lives: {0}  Score: {1}", Lives, Score);
                     CurrentGameState = GameState.Playing;
                 }
                 break;
@@ -72,43 +80,20 @@ public class GameManager : MonoBehaviour
         Score = 0;
     }
 
-    void OnGUI()
-    {
-        switch (CurrentGameState)
-        {
-            case GameState.Start:
-                GUI.Label(new Rect(10, Screen.height / 2, 300, 100), "Tap to play");
-                break;
-            case GameState.Playing:
-                GUI.Label(new Rect(10, 0, 300, 100), string.Format("Lives: {0}  Score: {1}", Lives, Score));
-                break;
-            case GameState.Won:
-                GUI.Label(new Rect(10, Screen.height / 2, 300, 100), "Won. Tap to play again");
-                break;
-            case GameState.LostALife:
-                GUI.Label(new Rect(10, Screen.height / 2, 300, 100), "Lost a life. Tap to continue");
-                break;
-            case GameState.LostAllLives:
-                GUI.Label(new Rect(10, Screen.height / 2, 300, 100), "Lost all lives. Tap to play again");
-                break;
-            default:
-                break;
-        }
-
-
-    }
-
-    internal static void DecreaseLives()
+  
+    public void DecreaseLives()
     {
         if (Lives > 0)
             Lives--;
 
         if(Lives == 0)
         {
+            statusText.text = "Lost all lives. Tap to play again";
             CurrentGameState = GameState.LostAllLives;
         }
         else
         {
+            statusText.text = "Lost a life. Tap to continue";
             CurrentGameState = GameState.LostALife;
         }
         Ball.StopBall();

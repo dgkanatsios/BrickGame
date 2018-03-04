@@ -7,45 +7,67 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 0
     path: Assets/Test Scene/Test Scene.unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Test Scene/Loading Scene.unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Sample Assets/Sample Scenes/Scenes/AI Jet Plane.unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Sample Assets/Sample Scenes/Scenes/AI Propeller Plane.unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Sample Assets/Sample Scenes/Scenes/Jet Plane (2 Axis).unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Sample Assets/Sample Scenes/Scenes/Propeller Plane (4 Axis).unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Sample Assets/Sample Scenes/Scenes/AI Car.unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Sample Assets/Sample Scenes/Scenes/AI Waypoint-Based Car.unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Sample Assets/Sample Scenes/Scenes/Car.unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Sample Assets/Sample Scenes/Scenes/First Person Character.unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Sample Assets/Sample Scenes/Scenes/Rolling Ball.unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Sample Assets/Sample Scenes/Scenes/AI Character.unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Sample Assets/Sample Scenes/Scenes/Third Person Character.unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Sample Assets/Effects/Light Shafts/Scenes/LightShaft Directional.unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Sample Assets/Effects/Light Shafts/Scenes/LightShaft Spot.unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Sample Assets/Sample Scenes/Scenes/Car.unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Sample Assets/Sample Scenes/Scenes/First Person Character.unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Sample Assets/Sample Scenes/Scenes/Particles.unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Sample Assets/Sample Scenes/Scenes/Jet Plane (2 Axis).unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Sample Assets/Sample Scenes/Scenes/Third Person Character.unity
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Sample Assets/Sample Scenes/Scenes/2D Character.unity
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/gameScene.unity
+    guid: 00000000000000000000000000000000
